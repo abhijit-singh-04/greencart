@@ -35,7 +35,7 @@ export const register = async (req, res) => {
 
     return res.status(201).json({
       success: true,
-      message: "Signup Successful",
+      message: "Sign up Successful",
       user: { name: user.name, email: user.email },
     });
   } catch (error) {
