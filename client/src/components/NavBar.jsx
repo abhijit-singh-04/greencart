@@ -44,11 +44,18 @@ const NavBar = () => {
         <img className="h-9" src={assets.logo} alt="logo" />
       </NavLink>
 
+      {/* <div className="flex items-center gap-5 text-gray-500"> */}
       {/* Desktop Menu */}
       <div className="hidden sm:flex items-center gap-8">
+        <button
+          onClick={() => navigate("/seller")}
+          className="border border-gray-300 px-3 py-1 rounded-full text-xs cursor-pointer opacity-80"
+        >
+          Seller Dashboard
+        </button>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/products">All Product</NavLink>
-        <NavLink to="/">Contact</NavLink>
+        {/* <NavLink to="/">Contact</NavLink> */}
 
         <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
           <input

@@ -51,12 +51,15 @@ const Cart = () => {
 
   const placeOrder = async () => {
     try {
-      if (!selectedAddress) {
-        toast.error("Please select an address");
+      if (!user) {
+        return toast.error("Please login to place order");
+      } else if (!selectedAddress) {
+        return toast.error("Please select an address");
+      } else if (cartArray.length === 0) {
+        return toast.error("Please add item in cart");
       }
-
-      // Place Order with COD
       if (paymentOption === "COD") {
+        // Place Order with COD
         const { data } = await axios.post("/api/order/cod", {
           userId: user._id,
           items: cartArray.map((item) => ({

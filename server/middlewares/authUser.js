@@ -21,7 +21,7 @@ const authUser = async (req, res, next) => {
     }
     next();
   } catch (error) {
-    console.log("Error in Auth Middleware : ", error.message);
+    console.log("Error in Auth User Middleware : ", error.message);
     return res.status(500).json({
       success: false,
       message: error.message,

@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="py-4 text-center text-sm md:text-base text-gray-500/80">
-        Copyright {new Date().getFullYear()} © GreenStack All Right Reserved.
+        Copyright {new Date().getFullYear()} © GreenCart All Right Reserved.
       </p>
     </div>
   );

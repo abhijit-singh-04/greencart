@@ -18,6 +18,7 @@ import AddProduct from "./pages/seller/AddProduct";
 import ProductList from "./pages/seller/ProductList";
 import Orders from "./pages/seller/Orders";
 import Loading from "./components/Loading";
+import PageNotFound from "./pages/PageNotFound";
 
 const App = () => {
   const isSellerPath = useLocation().pathname.includes("seller");
@@ -32,6 +33,7 @@ const App = () => {
       >
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="*" element={<PageNotFound />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:category" element={<ProductsCategory />} />
           <Route path="/products/:category/:id" element={<ProductDetails />} />
